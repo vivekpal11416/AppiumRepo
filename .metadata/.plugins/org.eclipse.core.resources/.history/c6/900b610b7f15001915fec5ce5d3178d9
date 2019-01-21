@@ -1,0 +1,26 @@
+describe('this suite automates the banking page',function(){
+	
+	function selUser(name){
+		browser.actions().mouseMove(element(by.id('userSelect')).click()).perform();
+		element.all(by.repeater('cust in Customers')).each(function(items){
+			items.getText().then(function(dropDownName){
+				
+				if(dropDownName==name){
+					items.click;
+				}
+			})
+		})
+	}
+	
+	it('click on customer login and perform actions as customer',function(){
+		
+		browser.get('http://www.way2automation.com/angularjs-protractor/banking/#/login');
+		element(by.css("button[ng-click='customer()']")).click();
+		browser.getCurrentUrl().then(function(title){
+			console.log(title);
+			
+			selUser("Albus Dumbledore");
+			element(by.css("button[type='submit']")).click();
+		})
+	})
+})

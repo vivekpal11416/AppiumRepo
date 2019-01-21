@@ -1,0 +1,8 @@
+describe('this suite automates the banking page',function(){
+	
+	it('click on customer login and perform actions as customer',function(){
+		
+		browser.get('http://www.way2automation.com/angularjs-protractor/banking/#/login');
+		element(by.css("button[ng-click='customer()']")).click();
+	})
+})

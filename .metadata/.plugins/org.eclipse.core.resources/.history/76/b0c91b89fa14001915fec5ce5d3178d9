@@ -1,0 +1,21 @@
+describe('This package defines cases for selecting values from dropdown',function(){
+	function calc(a,b,operation){
+		
+		element(by.model('first')).sendKeys(a);
+		element(by.model('second')).sendKeys(b);
+		
+		element.all(by.tagName('option')).each(function(items){
+			
+			item.getAttribute('value').then(function(value){
+				
+				if(value==operation){
+					items.click();
+				}
+			})
+		})
+		
+		element(by.id('gobutton')).click();
+	}
+	
+	
+})

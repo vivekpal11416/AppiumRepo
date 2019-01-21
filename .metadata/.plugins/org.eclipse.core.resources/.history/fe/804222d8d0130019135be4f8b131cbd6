@@ -1,0 +1,12 @@
+describe('this script is to automate calcuator angular website',function(){
+	
+	it('Entering values in the field',function(){
+		
+		browser.get("https://juliemr.github.io/protractor-demo/");
+		element(by.model("first")).sendKeys("4");
+		element(by.model("second")).sendKeys("6").then(function(){
+			
+			browser.sleep(5000);
+		})
+	})
+})

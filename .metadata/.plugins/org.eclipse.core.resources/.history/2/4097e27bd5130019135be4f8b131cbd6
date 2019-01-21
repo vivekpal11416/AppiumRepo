@@ -1,0 +1,15 @@
+describe('this script is to automate calcuator angular website',function(){
+	
+	it('Entering values in the field',function(){
+		
+		//var URL="https://juliemr.github.io/protractor-demo/";
+		browser.get('https://juliemr.github.io/protractor-demo/');
+		
+		element(by.model('first')).sendKeys('4');
+		element.all(by.options('value for (key, value) in operators').get(3).click();
+		element(by.model("second")).sendKeys("6").then(function(){
+			
+			browser.sleep(5000);
+		})
+	})
+})

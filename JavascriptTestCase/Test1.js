@@ -1,0 +1,14 @@
+ describe("Protractor starting Test Cases", function(){
+	
+	it("Login into javascript homepage",function(){
+		
+		//login test script
+		browser.get("https://www.amazon.in ");
+	})
+	
+	it("Logout from javascript homepage",function(){
+		
+		//logout test script
+	})
+	
+})
